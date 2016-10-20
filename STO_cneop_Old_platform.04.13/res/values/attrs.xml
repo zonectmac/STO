@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="StoDataEdittext">
+        <attr name="show" format="reference|boolean" />
+    </declare-styleable>
+
+    <string-array name="spinner_up_status">
+        <item>==请选择==</item>
+        <item>未上传</item>
+        <item>已上传</item>
+    </string-array>
+    <string-array name="spinner_goods_type">
+        <item>==请选择==</item>
+        <item>普通件</item>
+        <item>24H件</item>
+    </string-array>
+    <string-array name="upload_type">
+        <item>手动</item>
+        <item>自动</item>
+    </string-array>
+    <string-array name="program_role_choose">
+        <item>自动</item>
+        <item>网点</item>
+        <item>中心</item>
+        <item>航空</item>
+    </string-array>
+
+</resources>

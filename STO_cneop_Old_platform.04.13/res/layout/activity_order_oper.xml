@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_orderoper_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="@string/order_oper"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_orderoper_btnLeft"
+        style="@style/CommonButton"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_orderoper_tvTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/btn_orderoper_btnRight"
+        style="@style/CommonButton"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@id/btn_orderoper_btnLeft"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_orderoper_tvTitle"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>

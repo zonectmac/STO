@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_dataquery_lly1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/data_query_tv1"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="right"
+            android:text="@string/starttime" />
+
+        <com.cneop.stoExpress.activity.common.DatePicker
+            android:id="@+id/date_picker_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" >
+        </com.cneop.stoExpress.activity.common.DatePicker>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_dataquery_lly2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_dataquery_lly1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/data_query_tv2"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="right"
+            android:text="@string/endtime" />
+
+        <com.cneop.stoExpress.activity.common.DatePicker
+            android:id="@+id/date_picker_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" >
+        </com.cneop.stoExpress.activity.common.DatePicker>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_dataquery_lly3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_dataquery_lly2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/data_query_tv3"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/barcode" />
+
+        <EditText
+            android:id="@+id/et_dataquery_barcode"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_no_category_rgItemCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_dataquery_lly3"
+        android:layout_marginLeft="60dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdo_query_type_userno"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/userno" />
+
+        <RadioButton
+            android:id="@+id/rdo_query_type_device"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/device" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/lly_dataquery_lly4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_no_category_rgItemCategory"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_today"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/today" />
+
+        <Button
+            android:id="@+id/btn_yesterday"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/yesterday" />
+
+        <Button
+            android:id="@+id/btn_week"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/week" />
+
+        <Button
+            android:id="@+id/btn_lastweek"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/lastweek" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_dataquery_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_dataquery_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_dataquery_llyBottom"
+        android:layout_below="@id/lly_dataquery_lly4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/dataquery_head4"
+                layout="@layout/list_head_four" />
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_dataquery_lvBarcodeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dataquery_head4" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

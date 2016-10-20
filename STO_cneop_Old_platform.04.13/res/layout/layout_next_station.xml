@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_next_station_tvNextStation"
+        style="@style/CommonText"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/next_station" />
+
+    <EditText
+        android:id="@+id/et_next_station_etNextStation"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:hint="@string/please_input_code"
+        android:inputType="number"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_next_station_btnSelStation"
+        style="@style/CommonButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="@string/select" />
+
+</LinearLayout>

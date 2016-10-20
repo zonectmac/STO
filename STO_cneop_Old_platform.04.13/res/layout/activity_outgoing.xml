@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_outgoing_lly1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ViewStub
+            android:id="@+id/vs_outgoing_vsNextStation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_next_station" />
+
+        <ViewStub
+            android:id="@+id/vs_outgoing_vsRoute"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_route" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_outgoing_lly2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_outgoing_lly1" >
+
+        <ViewStub
+            android:id="@+id/vs_outgoing_vsCagegory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_goods_cagegory" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_outgoing_lly3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_outgoing_lly2" >
+
+        <include layout="@layout/layout_vehicle_id" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_outgoing_lly4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_outgoing_lly3"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginTop="2.5dp" >
+
+        <ViewStub
+            android:id="@+id/vs_outgoing_tvWeight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_weight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_outgoing_lly5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_outgoing_lly4" >
+
+        <include layout="@layout/layout_barcode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_outgoin_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_outgoing_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_outgoin_llyBottom"
+        android:layout_below="@id/lly_outgoing_lly5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/lly_outgoing_llyListHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ViewStub
+                    android:id="@+id/vs_outgoing_vsHead4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/list_head_four" />
+
+                <ViewStub
+                    android:id="@+id/vs_outgoing_vsHead5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/list_head_five" />
+            </LinearLayout>
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_outgoing_lvBarcodeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lly_outgoing_llyListHead" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

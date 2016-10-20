@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/tv_recipient_scan_tvRecipienter"
+        style="@style/CommonText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="@string/recipienter" />
+
+    <EditText
+        android:id="@+id/et_recipient_scan_etRecipienter"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_recipient_scan_tvRecipienter"
+        android:hint="@string/please_input_usercode"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_recipient_scan_btnSelUser"
+        style="@style/CommonButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/et_recipient_scan_etRecipienter"
+        android:text="@string/select" />
+
+    <TextView
+        android:id="@+id/tv_recipient_scan_tvItemCategory"
+        style="@style/CommonText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_below="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_marginTop="15dp"
+        android:gravity="right"
+        android:text="@string/item_category" />
+
+    <RadioGroup
+        android:id="@+id/rg_recipient_scan_rgItemCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/et_recipient_scan_etRecipienter"
+        android:layout_below="@id/et_recipient_scan_etRecipienter"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/tv_recipient_scan_tvItemCategory"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdo_recipient_scan_rbGoods"
+            style="@style/RadioButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/goods" />
+
+        <RadioButton
+            android:id="@+id/rdo_recipient_scan_rbNoGoods"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/noGoods" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_recipient_scan_tvDestination"
+        style="@style/CommonText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_below="@id/tv_recipient_scan_tvItemCategory"
+        android:layout_marginTop="15dp"
+        android:gravity="right"
+        android:text="@string/destination" />
+
+    <EditText
+        android:id="@+id/et_recipient_scan_etDestination"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvDestination"
+        android:layout_alignLeft="@id/et_recipient_scan_etRecipienter"
+        android:layout_toRightOf="@id/tv_recipient_scan_tvDestination"
+        android:hint="@string/please_input_code"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_recipient_scan_btnSelDestination"
+        style="@style/CommonButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvDestination"
+        android:layout_alignLeft="@id/btn_recipient_scan_btnSelUser"
+        android:layout_toRightOf="@id/et_recipient_scan_etDestination"
+        android:text="@string/select" />
+
+    <LinearLayout
+        android:id="@+id/tv_recipient_scan_tvWeight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_recipient_scan_tvDestination"
+        android:layout_marginTop="10dp" >
+
+        <ViewStub
+            android:id="@+id/vs_reciptient_scan_tvWeight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/layout_weight" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recipient_scan_tvBarcode"
+        style="@style/CommonText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_recipient_scan_tvRecipienter"
+        android:layout_below="@id/tv_recipient_scan_tvWeight"
+        android:layout_marginTop="15dp"
+        android:gravity="right"
+        android:text="@string/barcode" />
+
+    <EditText
+        android:id="@+id/et_recipient_scan_etBarcode"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvBarcode"
+        android:layout_alignLeft="@id/et_recipient_scan_etRecipienter"
+        android:layout_toRightOf="@id/tv_recipient_scan_tvBarcode"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_recipient_scan_btnAdd"
+        style="@style/CommonButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_recipient_scan_tvBarcode"
+        android:layout_alignLeft="@id/btn_recipient_scan_btnSelUser"
+        android:layout_toRightOf="@id/et_recipient_scan_etBarcode"
+        android:text="@string/add" />
+
+    <LinearLayout
+        android:id="@+id/lly_recipient_scan_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_recipient_scan_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_recipient_scan_llyBottom"
+        android:layout_below="@id/tv_recipient_scan_tvBarcode"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/include_recipient_scan_lvhead"
+                layout="@layout/list_head_five" />
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_recipient_scan_lvBarcodeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include_recipient_scan_lvhead" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/lly_orderalert_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_orderalert_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="@string/order_alter"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_orderalert_tvOrderAlert"
+        style="@style/CommonText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_orderalert_tvTitle"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/blue" />
+
+    <View
+        android:id="@+id/vw_orderalert_vwSplit"
+        style="@style/rowSeperator"
+        android:layout_below="@id/tv_orderalert_tvOrderAlert"
+        android:layout_marginTop="5dp" />
+
+    <LinearLayout
+        android:id="@+id/lly_orderalert_llyPage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@id/lly_orderalert_llyBottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_orderalert_btnPrePage"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnpre" />
+
+        <Button
+            android:id="@+id/btn_orderalert_btnNextPage"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnnext" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_orderalert_tvOrderStatus"
+        style="@style/CommonText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_orderalert_llyPage"
+        android:layout_below="@id/vw_orderalert_vwSplit"
+        android:gravity="left"
+        android:padding="10dp"
+        android:singleLine="false"
+        android:text="订单取消：枯磦  dddddddddddddddddddddddddddd" />
+
+</RelativeLayout>

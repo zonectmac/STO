@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_head"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/chk_data_upload_chkDataType"
+        style="@style/CheckBox"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:text="@string/statustype"
+        android:layout_height="25dp" />
+
+    <View
+        style="@style/ListSeperator"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="6dp" />
+
+    <TextView
+        android:id="@+id/tv_data_upload_tvCount"
+        style="@style/ListHeadText"
+        android:text="@string/unup"
+        android:layout_width="140dp" />
+
+</LinearLayout>

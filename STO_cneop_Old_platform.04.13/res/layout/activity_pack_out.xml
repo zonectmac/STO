@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_route"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_route" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_goods"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pack_out_route"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_goods_cagegory" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_carNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pack_out_goods"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_vehicle_id" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_package"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pack_out_carNo"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_pack_number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_barcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pack_out_package"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_barcode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pack_out_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_pack_out_scan_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_pack_out_bottom"
+        android:layout_below="@id/lly_pack_out_barcode"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/include_packout_lvHead"
+                layout="@layout/list_head_five" />
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_pack_out_scan_lvBarcodeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include_packout_lvHead" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

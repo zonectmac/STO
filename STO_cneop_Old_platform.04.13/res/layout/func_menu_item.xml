@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants" 
+    >
+
+    <ImageView 
+        android:id="@+id/func_menu_ivPic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="centerInside"
+        />
+    <CheckBox 
+        android:id="@+id/func_menu_ckSel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/func_menu_ivPic"
+        android:layout_marginLeft="5dp"
+        android:focusable="false"
+        style="@style/CheckBox"
+        />
+
+</RelativeLayout>

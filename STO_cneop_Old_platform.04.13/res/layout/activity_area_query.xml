@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_areaquery_lly1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_province"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/province" />
+
+        <Button
+            android:id="@+id/btn_province_btnCho"
+            style="@style/CommonButton"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/select" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_province"
+        style="@style/CommonEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_areaquery_lly1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:id="@+id/lly_areaquery_lly2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_province"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/city" />
+
+        <Button
+            android:id="@+id/btn_city_btnCho"
+            style="@style/CommonButton"
+         android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/select" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_city"
+        style="@style/CommonEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_areaquery_lly2"
+        android:paddingBottom="10dp"
+        android:focusable="false"  />
+
+    <LinearLayout
+        android:id="@+id/lly_areaquery_lly3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_city"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_area"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/area" />
+
+        <Button
+            android:id="@+id/btn_area_btnCho"
+            style="@style/CommonButton"
+      android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/select" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_area"
+        style="@style/CommonEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_areaquery_lly3"
+        android:paddingTop="10dp"
+        android:focusable="false"  />
+
+    <LinearLayout
+        android:id="@+id/lly_areaquery_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/bottom_button_style_2" />
+    </LinearLayout>
+
+</RelativeLayout>

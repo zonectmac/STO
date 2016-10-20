@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+	
+     <RelativeLayout
+        android:id="@+id/rll_pickup_rllTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_pickup_tvSendPhone"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:text="@string/sendphone" />
+
+        <CheckBox
+            android:id="@+id/chk_pickup_chkRepeat"
+            style="@style/CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:text="@string/multi_signture" />
+
+        <EditText
+            android:id="@+id/et_pickup_etSendPhone"
+            style="@style/CommonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/chk_pickup_chkRepeat"
+            android:layout_toRightOf="@id/tv_pickup_tvSendPhone"
+            android:hint="@string/please_input_phone" />
+
+        <EditText
+            android:id="@+id/et_pickup_etReceivePhone"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/et_pickup_etSendPhone"
+            android:layout_below="@id/et_pickup_etSendPhone"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/chk_pickup_chkRepeat"
+            android:hint="@string/please_input_phone" />
+
+        <TextView
+            android:id="@+id/tv_pickup_tvReceivePhone"
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/et_pickup_etReceivePhone"
+            android:layout_alignRight="@id/tv_pickup_tvSendPhone"
+            android:layout_below="@id/tv_pickup_tvSendPhone"
+            android:layout_toLeftOf="@id/et_pickup_etReceivePhone"
+            android:gravity="right"
+            android:text="@string/receivephone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pickup_llyReceivePhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rll_pickup_rllTop"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include
+            android:layout_width="wrap_content"
+            layout="@layout/layout_goods_cagegory" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pickup_llyDestination"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pickup_llyReceivePhone"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_destination" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pickup_llyBarcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_pickup_llyDestination"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_barcode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pickup_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_outgoing_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_pickup_llyBottom"
+        android:layout_below="@id/lly_pickup_llyBarcode"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/lly_pickup_llyTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <include layout="@layout/list_head_three" />
+            </LinearLayout>
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_pickup_lvList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lly_pickup_llyTitle" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

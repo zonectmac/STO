@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#ffff0000</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#00000000</color>
+    <color name="title_back_color">#ff565656</color>
+    <color name="gray">#ff808080</color>
+    <color name="title">#ff6972d8</color>
+    <color name="list_head">#ff3180BD</color>
+    <color name="list_item_selected">#ff00c4f6</color>
+    <color name="list_item_unselected">#ffffffff</color>
+    <color name="list_item_focused">#ff00c4f6</color>
+    <color name="list_seperator">#ff000000</color>
+    <color name="text1">#ff000000</color>
+    <color name="text2">#ff41a336</color>
+    <color name="text3">#ff807a3c</color>
+    <color name="text4">#ff7e3d7e</color>
+    <color name="text5">#ff8e8e8e</color>
+    <color name="text_disable">#ffadadad</color>
+    <color name="main_menu_item_bg">#ff0098da</color>
+<color name="blue">#0000cd</color>
+<color name="transparent_background">#50000000</color>
+
+</resources>

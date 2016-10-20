@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <ScrollView
+        android:id="@+id/sv_service"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/serviceUrl_tvDataAccessUrl"
+                style="@style/CommonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/service_ipurl" />
+
+            <EditText
+                android:id="@+id/serviceUrl_etDataAccessUrl"
+                style="@style/CommonEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_tvDataAccessUrl"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/serviceUrl_tvUpgradeUrl"
+                style="@style/CommonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_etDataAccessUrl"
+                android:layout_marginTop="5dp"
+                android:text="@string/upgrade_ipurl" />
+
+            <EditText
+                android:id="@+id/serviceUrl_etUpgradeUrl"
+                style="@style/CommonEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_tvUpgradeUrl"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/serviceUrl_tvSmsInfoUrl"
+                style="@style/CommonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_etUpgradeUrl"
+                android:layout_marginTop="5dp"
+                android:text="@string/smsInfoUrl" />
+
+            <EditText
+                android:id="@+id/serviceUrl_etSmsInfoUrl"
+                style="@style/CommonEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_tvSmsInfoUrl"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/serviceUrl_tvSmsSendUrl"
+                style="@style/CommonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_etSmsInfoUrl"
+                android:layout_marginTop="5dp"
+                android:text="@string/smsSendUrl" />
+
+            <EditText
+                android:id="@+id/serviceUrl_etSmsSendUrl"
+                style="@style/CommonEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_tvSmsSendUrl"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/serviceUrl_tvMdDownloadUrl"
+                style="@style/CommonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_etSmsSendUrl"
+                android:layout_marginTop="5dp"
+                android:text="@string/mdDownURL" />
+
+            <EditText
+                android:id="@+id/serviceUrl_etMdDownloadUrl"
+                style="@style/CommonEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serviceUrl_tvMdDownloadUrl"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/servcieUrl_llyBottomBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_2" >
+        </include>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <com.cneop.util.controls.ListViewEx
+        android:id="@+id/lv_system_config_lvMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.cneop.util.controls.ListViewEx>
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_lly1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/serverstationcode" />
+
+        <EditText
+            android:id="@+id/et_serverstation_code"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_lly2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_serversm_lly1"
+        android:orientation="horizontal" >
+        
+        <TextView
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/serverstationaddress" />
+
+        <EditText
+            android:id="@+id/et_serverstation_address"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_lly3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_serversm_lly2"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/serverstationphone" />
+
+        <EditText
+            android:id="@+id/et_serverstation_phone"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_lly4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_serversm_lly3"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CommonText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/phonenum" />
+
+        <EditText
+            android:id="@+id/et_serverstation_phonenum"
+            style="@style/CommonEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_lly5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lly_serversm_lly4"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_barcode" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_serversm_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_serversm_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_serversm_llyBottom"
+        android:layout_below="@id/lly_serversm_lly5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/serversm_head3"
+                layout="@layout/list_head_three" />
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_serversm_lvBarcodeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serversm_head3" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

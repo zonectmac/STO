@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_route_tvRoute"
+        style="@style/CommonText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="@string/route" />
+
+    <EditText
+        android:id="@+id/et_route_etRoute"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_route_tvRoute"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_route_tvRoute"
+        android:hint="@string/please_input_code"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_route_btnSelRoute"
+        style="@style/CommonButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_route_tvRoute"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/et_route_etRoute"
+        android:text="@string/select" />
+
+    <TextView
+        android:id="@+id/tv_route_tvNextDestinationShow"
+        style="@style/CommonText1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_route_tvRoute"
+        android:layout_below="@id/tv_route_tvRoute"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="@string/next_destination" />
+
+    <TextView
+        android:id="@+id/tv_route_tvNextDestination"
+        style="@style/CommonText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_route_tvNextDestinationShow"
+        android:layout_alignLeft="@id/et_route_etRoute"
+        android:layout_below="@id/et_route_etRoute" />
+
+    <TextView
+        android:id="@+id/tv_route_tvSecondDestinationShow"
+        style="@style/CommonText1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_route_tvRoute"
+        android:layout_below="@id/tv_route_tvNextDestinationShow"
+        android:layout_marginTop="4dp"
+        android:text="@string/second_destination" />
+
+    <TextView
+        android:id="@+id/tv_route_tvSecondDestination"
+        style="@style/CommonText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_route_tvSecondDestinationShow"
+        android:layout_alignLeft="@id/et_route_etRoute"
+        android:layout_below="@id/tv_route_tvNextDestination"
+        android:layout_toRightOf="@id/tv_route_tvSecondDestinationShow" />
+
+</RelativeLayout>

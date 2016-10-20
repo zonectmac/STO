@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_order_llyTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/list_head_one" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_order_lvOrder"
+        style="@style/CommonList"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/lly_order_llyTop"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@drawable/list_item_foucsed" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_order_tvCount"
+        style="@style/CommonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lv_order_lvOrder"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_order_btnDown"
+        style="@style/CommonButton"
+        android:layout_width="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lv_order_lvOrder"
+        android:layout_marginTop="5dp"
+        android:padding="0dp"
+        android:text="@string/btnload" />
+
+    <LinearLayout
+        android:id="@+id/lly_order_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_order_etOrderDetail"
+        style="@style/CommonEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/lly_order_llyBottom"
+        android:layout_below="@id/btn_order_btnDown"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:focusable="false"
+        android:gravity="top"
+        android:singleLine="false" />
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<roots>
+
+<config>
+	<configname>DeviceId</configname>
+	<configdesc>1</configdesc>
+	<configvalue>巴枪编号</configvalue>
+</config>
+<config>
+	<configname>ScannerSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>扫描头设置</configvalue>
+</config>
+<config>
+	<configname>SignerSet</configname>
+	<configdesc>0</configdesc>
+	<configvalue>签收名管理</configvalue>
+</config>
+<config>
+	<configname>UpdateByhands</configname>
+	<configdesc>0</configdesc>
+	<configvalue>手动更新</configvalue>
+</config>
+<config>
+	<configname>UploadSet</configname>
+	<configdesc>0</configdesc>
+	<configvalue>上传设置</configvalue>
+</config>
+<config>
+	<configname>PasswordSet</configname>
+	<configdesc>0</configdesc>
+	<configvalue>修改密码</configvalue>
+</config>
+<config>
+	<configname>UpdateVersion</configname>
+	<configdesc>0</configdesc>
+	<configvalue>软件升级</configvalue>
+</config>
+<config>
+	<configname>WifiSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>Wifi设置</configvalue>
+</config>
+<config>
+	<configname>SoundSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>声音设置</configvalue>
+</config>
+<config>
+	<configname>LightSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>背光设置</configvalue>
+</config>
+<config>
+	<configname>TimeSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>时间同步</configvalue>
+</config>
+<config>
+	<configname>BlueToothSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>蓝牙称设置</configvalue>
+</config>
+<config>
+	<configname>InputmethodSet</configname>
+	<configdesc>1</configdesc>
+	<configvalue>输入法设置</configvalue>
+</config>
+<config>
+	<configname>Network_settings</configname>
+	<configdesc>1</configdesc>
+	<configvalue>移动网络设置</configvalue>
+</config>
+</roots>

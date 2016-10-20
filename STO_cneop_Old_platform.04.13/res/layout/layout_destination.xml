@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+     <TextView
+        android:id="@+id/tv_destination_tvDestination"
+        style="@style/CommonText"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/destination" />
+
+    <EditText
+        android:id="@+id/et_destination_etDestination"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:inputType="number"
+        android:hint="@string/please_input_code" />
+
+    <Button
+        android:id="@+id/btn_destination_btnSelDestination"
+        style="@style/CommonButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:padding="2dp"
+        android:text="@string/select" />
+
+</LinearLayout>

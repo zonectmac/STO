@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cneop.stoExpress.cneops"
+    android:versionCode="5"
+    android:versionName="1.40" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 拍照的权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 屏蔽HOME键需要的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.uid.system" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_APN_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SERIAL_PORT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 获取imei -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name="com.cneop.util.AppContext"
+        android:icon="@drawable/sto_logo"
+        android:label="@string/app_name"
+        android:theme="@style/costittlesyle" >
+        <activity
+            android:name="com.cneop.stoExpress.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cneop.util.activity.BluetoothSetActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.util.activity.CameraActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.AdminMainActivity"
+            android:label="@string/admin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.ObjectSerectorActivity"
+            android:label="@string/objectSelector"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.ShowImageActivity"
+            android:label="@string/objectSelector"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.SignerManagerActivity"
+            android:label="@string/objectSelector"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.ServiceUrlActivity"
+            android:label="@string/service_url"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.SiteConfigActivity"
+            android:label="@string/site_config"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.FunConfigActivity"
+            android:label="@string/function_config"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.RoleConfigActivity"
+            android:label="@string/role_config"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.AutoUpdateSetActivity"
+            android:label="@string/autodel"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.admin.DataClearActivity"
+            android:label="@string/dataclear"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.DataQueryActivity"
+            android:label="@string/dataquery"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.SelectorControlActivity"
+            android:label="@string/dataquery"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.SelectResultActivity"
+            android:label="@string/dataquery"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.SystemConfigActivity"
+            android:label="@string/system_config"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.UserRoleActivity"
+            android:label="@string/role_select"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.ScanBaseActivity"
+            android:label="@string/title_activity_scan_base" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.RecipientScanActivity"
+            android:label="@string/title_activity_recipient_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OutgoingStationActivity"
+            android:label="@string/title_activity_outgoing"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OutgoingRouteActivity"
+            android:label="@string/title_activity_outgoing"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.TopiecesActivity"
+            android:label="@string/title_activity_topieces"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.SendingpiecesActivity"
+            android:label="@string/title_activity_sendingpieces"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.LeaveWarehouseActivity"
+            android:label="@string/title_activity_leave_warehouse"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.ExceptionActivity"
+            android:label="@string/title_activity_exception"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.BaggingOutActivity"
+            android:label="@string/title_activity_bagging_out"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.MsgNoticeActivity"
+            android:label="@string/title_activity_msg_notice"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.PackOutActivity"
+            android:label="@string/title_activity_pack_out"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.SignChooseActivity"
+            android:label="@string/title_activity_signchoose"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.SignatureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.SignaturePhotoActivity"
+            android:label="@string/title_activity_signaturephoto"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.PickupScanActivity"
+            android:label="@string/title_activity_pickup_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.DataUploadActivity"
+            android:label="@string/title_activity_data_upload"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.BarcodeTrackActivity"
+            android:label="@string/title_activity_barcode_track"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.AreaQueryActivity"
+            android:label="@string/title_activity_area_query"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.AreaNoDelvieryAcitvity"
+            android:label="@string/title_activity_area_nodelivery"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.PhoneMessageActivity"
+            android:label="@string/title_activity_phone_message"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.ZCFJActivity"
+            android:label="@string/title_activity_zcfj"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.FcOrDcActivity"
+            android:label="@string/title_activity_fc_or_dc"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.PickupChooseActivity"
+            android:label="@string/title_activity_pickup_choose_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.PickupScanNophoneActivity"
+            android:label="@string/title_activity_pickup_nophone_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.PickupScanPhoneActivity"
+            android:label="@string/title_activity_pickup_phone_scan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.AfterServerActivity"
+            android:label="@string/title_activity_after_server"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.RePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.FbOrDbActivity"
+            android:label="@string/title_activity_fb_or_db"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.DbScanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.PicQueryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OrderAlertActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OrderViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OrderAbnormalActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.common.CustomDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.OrderOperActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 开机广播 -->
+        <receiver android:name="com.cneop.util.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" >
+                </data>
+            </intent-filter>
+        </receiver>
+        <!-- 网络监听 -->
+        <receiver android:name="com.cneop.util.NetWorkChangeBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 蓝牙电子秤连接 -->
+        <receiver android:name="com.cneop.util.bluetooth.BluetoothConnectActivityReceiver" >
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.cneop.stoExpress.server.OrderServer"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.cneop.stoExpress.server.OrderAlertServer"
+            android:enabled="true" >
+        </service>
+
+        <activity android:name="com.cneop.stoExpress.activity.System_Activity" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.ScanModleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" >
+        </activity>
+        <activity
+            android:name="com.cneop.stoExpress.activity.scan.LockScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity android:name="com.cneop.stoExpress.activity.DataUploadActivity_f1" >
+        </activity>
+    </application>
+
+</manifest>

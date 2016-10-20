@@ -1,0 +1,144 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowTitleSize">40.0dip</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@color/title</item>
+    </style>
+
+    <style name="ContentText">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:background">@drawable/tv_content_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="costittlesyle" parent="android:Theme">
+        <item name="android:windowTitleSize">30.0dip</item>
+        <item name="android:windowTitleBackgroundStyle">@color/title_back_color</item>
+    </style>
+
+    <style name="pageBackground">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="ListSeperator">
+        <item name="android:background">@color/list_seperator</item>
+        <item name="android:layout_width">1.0px</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="ListHeadText" parent="@style/CommonText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ListScanItem" parent="@style/CommonText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="tittlefont">
+        <item name="android:textColor">#F5F5F5</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="CommonText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonText1">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="RadioButton" parent="@style/CommonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/btn_radio</item>
+    </style>
+
+    <style name="CheckBox" parent="@style/CommonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/btn_check</item>
+    </style>
+
+    <style name="TagText" parent="@style/CommonText"></style>
+
+    <style name="ListItemText" parent="@style/CommonText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="CommonEdit" parent="@style/CommonText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/edit_selector</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonSpinner">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:background">@drawable/spinner_selector</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonButton">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dip</item>
+    </style>
+
+    <style name="BottomBarButton" parent="@style/CommonButton">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_margin">4.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="CommonList">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@android:color/darker_gray</item>
+        <item name="android:dividerHeight">0.5dip</item>
+    </style>
+
+    <style name="rowSeperator">
+        <item name="android:background">@color/list_seperator</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+    <!-- 半透明 -->
+    <style name="Transparent" parent="@style/AppBaseTheme">
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/tv_exception_tvType"
+        style="@style/CommonText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:text="@string/type" />
+
+    <EditText
+        android:id="@+id/et_exception_etType"
+        style="@style/CommonEdit"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_exception_tvType"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_exception_tvType"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_exception_btnSel"
+        style="@style/CommonButton"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_exception_tvType"
+        android:layout_toRightOf="@id/et_exception_etType"
+        android:text="@string/select" />
+
+    <TextView
+        android:id="@+id/tv_exception_tvReason"
+        style="@style/CommonText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_exception_tvType"
+        android:layout_below="@id/tv_exception_tvType"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:text="@string/reason" />
+
+    <EditText
+        android:id="@+id/et_exceptin_etReason"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_alignLeft="@id/et_exception_etType"
+        android:layout_alignTop="@id/tv_exception_tvReason"
+        android:layout_below="@id/et_exception_etType"
+        android:layout_toRightOf="@id/tv_exception_tvReason"
+        android:enabled="false"
+        android:gravity="top"
+        android:singleLine="false" />
+
+    <LinearLayout
+        android:id="@+id/lly_exception_llyPhoto"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/et_exceptin_etReason"
+        android:layout_alignTop="@id/btn_exception_btnSel"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/btn_exception_btnSel"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_photograph" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exception_tvBarcode"
+        style="@style/CommonText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_exception_tvType"
+        android:layout_below="@id/tv_exception_tvReason"
+        android:layout_marginTop="103dp"
+        android:gravity="right"
+        android:text="@string/barcode" />
+
+    <EditText
+        android:id="@+id/et_exception_etBarcode"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_exception_tvBarcode"
+        android:layout_alignLeft="@id/et_exception_etType"
+        android:layout_below="@id/et_exceptin_etReason"
+        android:layout_toRightOf="@id/tv_exception_tvBarcode" />
+
+    <Button
+        android:id="@+id/btn_exception_btnAdd"
+        style="@style/CommonButton"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_exception_tvBarcode"
+        android:layout_alignLeft="@id/lly_exception_llyPhoto"
+        android:layout_below="@id/lly_exception_llyPhoto"
+        android:layout_toRightOf="@id/et_exception_etBarcode"
+        android:text="@string/add" />
+
+    <LinearLayout
+        android:id="@+id/lly_exception_llyBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_exception_scan_hslist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_exception_llyBottom"
+        android:layout_below="@id/tv_exception_tvBarcode"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@+id/include_exception_scan_lvhead"
+                layout="@layout/list_head_two" />
+
+            <com.cneop.util.controls.ListViewEx
+                android:id="@+id/lv_exception_lvBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/include_exception_scan_lvhead" >
+            </com.cneop.util.controls.ListViewEx>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

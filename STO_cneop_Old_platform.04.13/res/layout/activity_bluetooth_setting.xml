@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:background="#ffffff"
+    android:padding="0dp"
+    android:paddingLeft="0dp" >
+
+    <CheckBox
+        android:id="@+id/ckx_scalage_switch"
+        style="@style/CheckBox"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="0dp"
+        android:text="@string/open_electric_scale" />
+
+    <TextView
+        android:id="@+id/tv_bluetooth_weight"
+        style="@style/TagText"
+        android:layout_width="90.0dip"
+        android:layout_alignBaseline="@id/ckx_scalage_switch"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/ckx_scalage_switch"
+        android:gravity="right" />
+
+    <!-- line 2 -->
+
+    <TextView
+        android:id="@+id/tv_bluetooth_address"
+        style="@style/TagText"
+        android:layout_width="90.0dip"
+        android:layout_below="@id/ckx_scalage_switch"
+        android:layout_marginTop="5dp"
+        android:text="@string/blue_tooth_address" />
+
+    <EditText
+        android:id="@+id/et_bluetooth_address"
+        style="@style/CommonEdit"
+        android:layout_alignBaseline="@id/tv_bluetooth_address"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_address" />
+
+    <!-- line 3 -->
+
+    <TextView
+        android:id="@+id/tv_bluetooth_device_name"
+        style="@style/TagText"
+        android:layout_width="90.0dip"
+        android:layout_below="@id/tv_bluetooth_address"
+        android:layout_marginTop="15dp"
+        android:text="@string/device_name" />
+
+    <EditText
+        android:id="@+id/et_bluetooth_device_name"
+        style="@style/CommonEdit"
+        android:layout_alignBaseline="@id/tv_bluetooth_device_name"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_device_name" />
+
+    <!-- line 4 -->
+
+    <TextView
+        android:id="@+id/tv_bluetooth_verification_code"
+        style="@style/TagText"
+        android:layout_width="90.0dip"
+        android:layout_below="@id/tv_bluetooth_device_name"
+        android:layout_marginTop="15dp"
+        android:text="@string/verification_code" />
+
+    <EditText
+        android:id="@+id/et_bluetooth_verification_code"
+        style="@style/CommonEdit"
+        android:layout_alignBaseline="@id/tv_bluetooth_verification_code"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_verification_code" />
+
+    <!-- line 5 -->
+
+    <TextView
+        android:id="@+id/tv_bluetooth_scale_mode"
+        style="@style/TagText"
+        android:layout_width="90.0dip"
+        android:layout_below="@id/tv_bluetooth_verification_code"
+        android:layout_marginTop="15dp"
+        android:text="@string/electric_scale_model" />
+
+    <Spinner
+        android:id="@+id/spin_bluetooth_scale_model"
+        style="@style/CommonSpinner"
+        android:layout_alignTop="@id/tv_bluetooth_scale_mode"
+        android:layout_marginRight="5.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_scale_mode" />
+
+    <TextView
+        android:id="@+id/tv_bluetooth_begin"
+        style="@style/TagText"
+        android:layout_below="@id/spin_bluetooth_scale_model"
+        android:layout_marginTop="15dp"
+        android:text="@string/begin" />
+
+    <EditText
+        android:id="@+id/et_bluetooth_begin"
+        style="@style/CommonEdit"
+        android:layout_width="50.0dip"
+        android:layout_alignBaseline="@id/tv_bluetooth_begin"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_begin" />
+
+    <TextView
+        android:id="@+id/tv_bluetooth_end"
+        style="@style/TagText"
+        android:layout_alignBaseline="@id/tv_bluetooth_begin"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/et_bluetooth_begin"
+        android:text="@string/end" />
+
+    <EditText
+        android:id="@+id/et_bluetooth_end"
+        style="@style/CommonEdit"
+        android:layout_width="50.0dip"
+        android:layout_alignBaseline="@id/tv_bluetooth_begin"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/tv_bluetooth_end" />
+
+    <CheckBox
+        android:id="@+id/ckx_bluetooth_reverse"
+        style="@style/CheckBox"
+        android:layout_alignBaseline="@id/tv_bluetooth_begin"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@id/et_bluetooth_end"
+        android:text="@string/reverse" />
+
+    <Button
+        android:id="@+id/btn_bluetooth_search"
+        style="@style/BottomBarButton"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bluetooth_begin"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/btn_bluetooth_back"
+        android:text="@string/search_device" />
+
+    <Button
+        android:id="@+id/btn_bluetooth_connect"
+        style="@style/BottomBarButton"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spin_bluetooth_scale_model"
+        android:layout_below="@id/tv_bluetooth_begin"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/btn_bluetooth_search"
+        android:text="@string/connect" />
+
+    <Button
+        android:id="@+id/btn_bluetooth_save"
+        style="@style/BottomBarButton"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/save" />
+
+    <Button
+        android:id="@+id/btn_bluetooth_back"
+        style="@style/BottomBarButton"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btn_bluetooth_save"
+        android:layout_toRightOf="@id/btn_bluetooth_save"
+        android:text="@string/back" />
+    
+ 
+    <com.cneop.util.controls.ListViewEx
+        android:id="@+id/lv_bluetooth_mac"
+        style="@style/CommonList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_bluetooth_save"
+        android:layout_below="@id/btn_bluetooth_search"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.0"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

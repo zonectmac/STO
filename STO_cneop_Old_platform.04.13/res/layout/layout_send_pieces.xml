@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_send_pieces_tvSendPieces"
+        style="@style/CommonText"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/send_pieces" />
+
+    <EditText
+        android:id="@+id/et_send_pieces_etSendPieces"
+        style="@style/CommonEdit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:hint="@string/please_input_usercode"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_send_pieces_btnSelUser"
+        style="@style/CommonButton"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:text="@string/select" />
+
+</LinearLayout>

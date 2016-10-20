@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+      android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_data_query_condition_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="@string/tiptip"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/et_custom_dialog_etContent"
+        style="@style/CommonEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_data_query_condition_tvTitle"
+        android:layout_margin="5dp" />
+
+    <LinearLayout
+        android:id="@+id/lly_custom_dialog_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_custom_dialog_btnDel"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/del" />
+
+        <Button
+            android:id="@+id/btn_custom_dialog_btnCancel"
+            style="@style/CommonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+</RelativeLayout>

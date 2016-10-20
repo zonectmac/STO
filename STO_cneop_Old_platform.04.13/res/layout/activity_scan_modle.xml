@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="245dp"
+    android:layout_gravity="center"
+    android:background="@drawable/index_bg" >
+
+    <TextView
+        android:id="@+id/tv_scan_module_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="@string/scan_module_set"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/lly_scan_module_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" >
+
+        <include layout="@layout/bottom_button_style_2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_scan_module_tvTitle"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/rg_scan_module_rgScanModle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_scan_module_rbSingle"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/singleScan" />
+
+            <RadioButton
+                android:id="@+id/rb_scan_module_rbContinue"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/continueScan" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/cb_scan_module_chkVibrator"
+                style="@style/CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/isVibrator" />
+
+            <CheckBox
+                android:id="@+id/cb_scan_module_chkLockScreen"
+                style="@style/CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/isLockScreen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

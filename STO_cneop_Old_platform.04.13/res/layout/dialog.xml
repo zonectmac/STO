@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/danxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="单扫" />
+
+        <RadioButton
+            android:id="@+id/lianxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连扫" />
+
+     
+    </RadioGroup>
+
+</LinearLayout>

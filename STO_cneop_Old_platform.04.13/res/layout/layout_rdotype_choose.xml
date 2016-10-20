@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+   <TextView
+       android:id="@+id/rdotype_tv"
+       style="@style/CommonText"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/statustype" />
+    
+    <RadioGroup
+        android:id="@+id/rg_typestatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rdotype_tv"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdo_status_normal"
+            style="@style/RadioButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/normal" />
+
+        <RadioButton
+            android:id="@+id/rdo_status_hourstype"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hourstype" />
+        
+        <RadioButton
+            android:id="@+id/rdo_status_all"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:checked="true" />
+    </RadioGroup>
+       
+</RelativeLayout>

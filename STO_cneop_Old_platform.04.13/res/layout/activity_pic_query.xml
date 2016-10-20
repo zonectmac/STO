@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/lly_pic_query_llyTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/list_head_two" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly_pic_query_llyBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/bottom_button_style_3" />
+    </LinearLayout>
+
+    <com.cneop.util.controls.ListViewEx
+        android:id="@+id/lv_pic_query_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lly_pic_query_llyBottom"
+        android:layout_below="@id/lly_pic_query_llyTop" >
+    </com.cneop.util.controls.ListViewEx>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <TextView
+        android:id="@+id/tv_goods_category_tvItemCategory"
+        style="@style/CommonText"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="right"
+        android:text="@string/item_category" />
+
+    <RadioGroup
+        android:id="@+id/rg_goods_category_rgItemCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdo_goods_category_rbGoods"
+            style="@style/RadioButton"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/goods" />
+
+        <RadioButton
+            android:id="@+id/rdo_goods_category_rbNoGoods"
+            style="@style/RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/noGoods" />
+    </RadioGroup>
+
+</LinearLayout>

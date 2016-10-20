@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_head"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_list_head_three_tvhead1"
+        style="@style/ListHeadText"
+        android:layout_width="100dp" />
+
+    <View
+        style="@style/ListSeperator"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/tv_list_head_three_tvhead2"
+        style="@style/ListHeadText"
+        android:layout_width="100dp" />
+
+    <View
+        style="@style/ListSeperator"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="3dp" />
+
+    <TextView
+        android:id="@+id/tv_list_head_three_tvhead3"
+        style="@style/ListHeadText"
+        android:gravity="left"
+        android:layout_width="100dp" />
+
+</LinearLayout>

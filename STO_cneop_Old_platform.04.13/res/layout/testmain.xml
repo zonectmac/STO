@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    
+    <EditText
+        android:id="@+id/etnum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要插入的记录总数"
+        android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/etnumofonce"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入每次插入记录条数"
+        android:inputType="number" />
+    
+    <Button
+        android:id="@+id/start"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="开始插入" />
+    
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text="记录数" />
+    
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="开始删除" />
+    
+    <TextView
+        android:id="@+id/timeofdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text="删除时间" />
+    
+    <Button
+        android:id="@+id/yasuo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="开始压缩" />
+    
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text="压缩时间" />
+	
+</LinearLayout>
